@@ -125,6 +125,8 @@ FROM [dbo].[SalesData$]
 GROUP BY Product
 ORDER BY TotalSales DESC
 ```
+##### Expected Result
+![top selling](https://github.com/user-attachments/assets/e35efcd9-9112-488c-91ac-1cf78fe953f1)
 
 -------query to calculate total revenue per product------
 ```SQL
@@ -132,6 +134,9 @@ SELECT Product, SUM(Quantity * UnitPrice) AS TotalRevenue
 FROM [dbo].[SalesData$]
 GROUP BY Product
 ```
+##### Expected Result
+![total revenue](https://github.com/user-attachments/assets/ea18acd6-7d9d-4f07-b666-ec4342497d04)
+
 
 --------query to calculate monthly sales totals for the current year------
 ``` SQL
@@ -142,14 +147,18 @@ AND OrderDate < DATEADD(YEAR, 1, DATEFROMPARTS(YEAR(GETDATE()), 1, 1)) -- Start 
 GROUP BY FORMAT(OrderDate, 'yyyy-MM')
 ORDER BY Month
 ```
+##### Expected Result
+![total sales monthly ](https://github.com/user-attachments/assets/0ddd14c7-ac21-4622-8148-a72d37d05e0c)
 
 -------query to find the top 5 customers by total purchase amount-------
 ```SQL
-SELECT TOP 5 [Customer_Id], SUM(Quantity * UnitPrice) AS TotalPurchase
+SELECT TOP 5 [Customer Id], SUM(Quantity * UnitPrice) AS TotalPurchase
 FROM [dbo].[SalesData$]
-GROUP BY [Customer_Id]
+GROUP BY [Customer Id]
 ORDER BY TotalPurchase DESC
 ```
+##### Expected Result
+![top 5 customers](https://github.com/user-attachments/assets/f4e696a4-8d0b-4c64-a6af-d0b06d93ff8d)
 
 ------query to calculate the percentage of total sales contributed by each region-----
 ```SQL
@@ -173,3 +182,9 @@ FROM [dbo].[SalesData$]
 WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 )
 ```
+##### Expected Result
+![not made sales](https://github.com/user-attachments/assets/15d1f4a5-18ad-43b6-8dcd-189b33661139)
+
+
+## POWER BI ( FOR DATA VISUALIZATION)
+---
