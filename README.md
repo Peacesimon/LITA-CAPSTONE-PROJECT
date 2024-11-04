@@ -102,5 +102,74 @@ Total Sales = Quantity * Unit price
 
 
 
+### SQL for database management and quering
+### Query to retrieve the total sales for each product category----
 
+```SQL
+SELECT Product, SUM(Quantity * UnitPrice) AS TotalSales
+FROM [dbo].[SalesData$]
+GROUP BY [Product]
+```
 
+Query to find the number of sales transactions in each region------
+```SQL
+SELECT Region, COUNT(OrderID) AS NumberOfTransactions
+FROM [dbo].[SalesData$]
+GROUP BY Region
+```
+
+--------query to find the highest-selling product by total sales value--------
+```SQL
+SELECT Top 1 Product, SUM(Quantity * UnitPrice) AS TotalSales
+FROM [dbo].[SalesData$]
+GROUP BY Product
+ORDER BY TotalSales DESC
+```
+
+-------query to calculate total revenue per product------
+```SQL
+SELECT Product, SUM(Quantity * UnitPrice) AS TotalRevenue
+FROM [dbo].[SalesData$]
+GROUP BY Product
+```
+
+--------query to calculate monthly sales totals for the current year------
+``` SQL
+SELECT FORMAT(OrderDate, 'yyyy-MM') AS Month, SUM(Quantity * UnitPrice) AS TotalSales
+FROM [dbo].[SalesData$]
+WHERE OrderDate >= DATEFROMPARTS(YEAR(GETDATE()), 1, 1) -- Start of the current year
+AND OrderDate < DATEADD(YEAR, 1, DATEFROMPARTS(YEAR(GETDATE()), 1, 1)) -- Start of the next year
+GROUP BY FORMAT(OrderDate, 'yyyy-MM')
+ORDER BY Month
+```
+
+-------query to find the top 5 customers by total purchase amount-------
+```SQL
+SELECT TOP 5 [Customer_Id], SUM(Quantity * UnitPrice) AS TotalPurchase
+FROM [dbo].[SalesData$]
+GROUP BY [Customer_Id]
+ORDER BY TotalPurchase DESC
+```
+
+------query to calculate the percentage of total sales contributed by each region-----
+```SQL
+select Region,
+SUM (sales_Revenue) as total_sales,
+round ((select sum (sales_Revenue)/ cast((select sum(sales_Revenue)
+FROM [dbo].[SalesData$] ) as float) *100), 0) as
+percentage_total_sales
+FROM [dbo].[SalesData$]
+GROUP BY Region
+ORDER BY Region DESC
+```
+
+--------query to identify products with no sales in the last quarter------
+```SQL
+SELECT DISTINCT Product
+FROM [dbo].[SalesData$]
+WHERE Product NOT IN (
+SELECT Product
+FROM [dbo].[SalesData$]
+WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
+)
+```
