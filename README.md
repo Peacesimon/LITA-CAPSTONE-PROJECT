@@ -92,6 +92,13 @@ Total Sales = Quantity * Unit price
 #### Quarterly Revenue
 ![image](https://github.com/user-attachments/assets/19f76b65-2b79-4d14-b942-19f2048cd540)
 
+### Sales Report using Charts
+#### Top 3 selling Product
+![image](https://github.com/user-attachments/assets/baa7cce2-283e-4c3f-a673-f1cf3c70af4e)
+
+#### Monthly Sales Trend
+![image](https://github.com/user-attachments/assets/96eba40a-4a13-4bd6-b32d-2798490a2c36)
+
 
 
 
