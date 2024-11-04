@@ -102,7 +102,8 @@ Total Sales = Quantity * Unit price
 
 
 
-### SQL for database management and quering
+## SQL for Database Management and Quering
+---
 ### Query to retrieve the total sales for each product category----
 
 ```SQL
@@ -186,5 +187,9 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 ![not made sales](https://github.com/user-attachments/assets/15d1f4a5-18ad-43b6-8dcd-189b33661139)
 
 
+
+
 ## POWER BI ( FOR DATA VISUALIZATION)
 ---
+
+
