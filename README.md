@@ -102,6 +102,10 @@ Total Sales = Quantity * Unit price
 
 
 
+
+
+
+
 ## SQL for Database Management and Quering
 ---
 ### Query to retrieve the total sales for each product category----
@@ -189,7 +193,45 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 
 
 
+
+
+
+
 ## POWER BI ( FOR DATA VISUALIZATION)
 ---
+
+![image](https://github.com/user-attachments/assets/200fc8f6-82b3-47f5-97e2-07ba10848a05)
+
+
+Looking at this sales report, I can provide several key insights:
+
+1. Overall Performance:
+- Total revenue is 2.1M with an average revenue of 212 per unit
+- The company sells 6 different products
+- Total quantity sold is 68.5K units
+
+2. Regional Performance:
+- The East region is the strongest performer with 928K (44%) of revenue
+- This is followed by West (486K/23%), South (~300K/14%), and North (386K/19%)
+- The East region also leads in quantity sold at ~20K units
+
+3. Product Distribution:
+- Looking at the "Region by Quantity sold and Product" chart:
+- Gloves appear to be the highest-volume product across regions
+- The South region shows particularly strong glove sales
+- Jackets have more balanced distribution across regions
+- Hat sales appear to be lower overall compared to other products
+
+4. Interesting Patterns:
+- Despite the East having the highest revenue, the South shows higher unit sales in some product categories
+- This suggests different pricing strategies or product mix by region
+- The West region has the lowest quantity sold but generates 23% of revenue, indicating higher price points or premium product mix
+
+5. Potential Opportunities:
+- There may be opportunities to replicate the East region's success in other territories
+- The North region appears to have room for growth given its lower performance metrics
+- Product mix optimization could help boost revenue in lower-performing regions
+
+
 
 
