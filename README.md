@@ -233,5 +233,39 @@ Looking at this sales report, I can provide several key insights:
 - Product mix optimization could help boost revenue in lower-performing regions
 
 
+##  Using the filter function for each region
+![image](https://github.com/user-attachments/assets/0a28be46-c7d3-407a-8648-1fc95fefa3af)
+
+
+
+
+1. Overall Performance:
+- Total revenue for the East region is 485.9K
+- Average revenue per unit is 196
+- Total quantity sold is 20.4K units
+- The region sells 4 product types (Hat, Jacket, Shirt, and Shoes)
+
+2. Product Mix Analysis:
+- Jackets appear to be the highest volume product at around 6K units
+- Shirts follow with approximately 3K units
+- This suggests Jackets are the flagship product for the East region
+
+3. Revenue Metrics:
+- The East region accounts for 100% of the shown revenue (486K)
+- With an average revenue of 196 per unit and total quantity of 20.4K, this suggests a balanced pricing strategy
+- The volume of sales (20.4K units) indicates strong market penetration in this region
+
+4. Product Distribution:
+- Looking at the "Region by Quantity sold and Product" chart:
+- There's a clear hierarchy in product sales with Jackets leading
+- Shirts form a significant secondary product line
+- Hat and Shoes appear to have lower sales volumes
+
+5. Business Implications:
+- The East region appears to be operating efficiently with a focused product strategy
+- The high volume of Jacket sales might indicate a good product-market fit in this region
+- There might be opportunity to grow Hat and Shoes sales to balance the product mix
+
+Would you like me to explore any particular aspect of this analysis in more detail?
 
 
