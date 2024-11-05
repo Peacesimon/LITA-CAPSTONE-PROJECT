@@ -216,19 +216,19 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 - Total quantity sold is 68.5K units
 
 2. Regional Performance:
-- The East region is the strongest performer with 928K (44%) of revenue
-- This is followed by West (486K/23%), South (~300K/14%), and North (386K/19%)
-- The East region also leads in quantity sold at ~20K units
+- The South region is the strongest performer with 928K (44%) of revenue
+- This is followed by East (486K/23%), West (~300K/14%), and North (386K/19%)
+- The South region also leads in quantity sold at ~24K units
 
 3. Product Distribution:
 - Looking at the "Region by Quantity sold and Product" chart:
 - Gloves appear to be the highest-volume product across regions
 - The South region shows particularly strong glove sales
-- Jackets have more balanced distribution across regions
-- Hat sales appear to be lower overall compared to other products
+- Shoes have more balanced distribution across regions
+-  Jacket sales appear to be lower overall compared to other products
 
 4. Interesting Patterns:
-- Despite the East having the highest revenue, the South shows higher unit sales in some product categories
+- Despite the South having the highest revenue, the South shows higher unit sales in some product categories
 - This suggests different pricing strategies or product mix by region
 - The West region has the lowest quantity sold but generates 23% of revenue, indicating higher price points or premium product mix
 
@@ -238,7 +238,9 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 - Product mix optimization could help boost revenue in lower-performing regions
 
 
-##  Using the filter function for each region
+##  Regional Performance
+
+### Eastern Region
 ![image](https://github.com/user-attachments/assets/0a28be46-c7d3-407a-8648-1fc95fefa3af)
 
 
@@ -271,6 +273,60 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 - The high volume of Jacket sales might indicate a good product-market fit in this region
 - There might be opportunity to grow Hat and Shoes sales to balance the product mix
 
-Would you like me to explore any particular aspect of this analysis in more detail?
+#### North Region
+![image](https://github.com/user-attachments/assets/9c9ab3e7-c6bc-42ad-ba53-5c1818083fa8)
 
 
+### Key Insights
+- The North Region sells 3 main products: Jacket, Shirt, and Hat.
+- Jacket sales appear to be the highest volume across the North region, making up around 6K units.
+- Shirt sales are a distant second at around 3-4K units.
+- The Total Quantity sold is 12.4K units, which is relatively low given the high total revenue.
+- This indicates the products may be sold at premium price points, but the company could potentially increase volume to drive further growth.
+
+
+
+### Southern  Region
+![image](https://github.com/user-attachments/assets/2c26fc5c-8f60-40df-b249-bd7562842e37)
+
+
+### Key Insights
+- The South region accounts for 100% of the total revenue, which has grown significantly to $927.8K.
+- The company sells 3 main products in the South region: Gloves, Shoes, and Socks.
+- Glove sales are the highest volume at around 8K units.
+- Shoes and Socks have lower but still substantial sales, around 4K and 6K units respectively.
+
+
+### Recommendations for the South Region:
+---
+
+1. Product Diversification: Analyze market trends and customer needs to identify new product opportunities.
+
+2. Operational Scaling: Identify areas for process improvements and automation to drive further operational efficiencies.
+
+3. Pricing Optimization:
+- Analyze the price elasticity of demand for the current product mix.
+- Identify opportunities to optimize pricing while maintaining or even increasing sales volumes.
+
+
+### Western Region
+![image](https://github.com/user-attachments/assets/61d48fb8-126d-4d20-9059-c224e19f581a)
+
+
+### Key Insights
+- The West region accounts for 100% of the total revenue, which stands at $300.3K.
+- The company sells 4 main products in the West region: Gloves, Hats, Shoes, and Socks.
+- Glove sales are the highest volume at around 3K units.
+- Socks are the next highest seller at around 2K units.
+- Hats and Shoes have lower but still substantial sales volumes.
+
+
+### Recommendations for the West Region:
+
+1. Product Portfolio Expansion:
+- Consider introducing new product categories beyond Gloves, Hats, Shoes, and Socks to further diversify the offering.
+- Analyze market trends and customer preferences to identify untapped opportunities.
+
+2. Pricing Optimization:
+- Evaluate the potential to increase prices on certain high-performing products without significantly impacting demand.
+- This could help drive higher margins and profitability in the West region.
