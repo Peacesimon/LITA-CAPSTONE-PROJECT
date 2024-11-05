@@ -4,7 +4,7 @@
 
 ### Project Overview
 ---
-The Sales Data Analysis Project aims to uncover valauble insights from sales data  This Project aimed to analyze, visualize and Provide insights from regions and product sold.The Project utilized dataset spanning from 2023 to 2024, comprising of 9,922 record of sales transaction. The  By analysing the various parameters in the data received we seek to gather enough reasonable decisions which then enabe us to tell compelling stories around our data for the insights gotten and to know the best performance from our data.
+The Sales Data Analysis Project aims to uncover valauble insights from sales data  This Project aimed to analyze, visualize and Provide insights from regions and product sold.The Project utilized dataset spanning from 2023 to 2024, comprising of 9,922 record of sales transaction.  By analysing the various parameters in the data received we seek to gather enough reasonable decisions which then enabe us to tell compelling stories around our data for the insights gotten and to know the best performance from our data.
 
 ### Objectives
 ---
@@ -70,12 +70,16 @@ Total Sales = Quantity * Unit price
 #### Revenue by Region	
 ![image](https://github.com/user-attachments/assets/0702097a-d0a8-48f7-bb1c-60fa06da7968)
 
+The South has the highest revenue from region
+
 
 #### Region by Quantity sold
 ![image](https://github.com/user-attachments/assets/c26428b7-2d82-4589-a286-14553e75baa6)
 
 #### Total Sales per Product
 ![image](https://github.com/user-attachments/assets/8242de82-93fc-4c03-9e57-f441599b7b28)
+
+These are the  product sold within the region and Shoes has the highest sales
 
 
 #### Average Quantity  per Product
@@ -87,6 +91,8 @@ Total Sales = Quantity * Unit price
 
 #### Monthly Revenue
 ![image](https://github.com/user-attachments/assets/994340d0-923f-4577-8325-5aeb75b4acd6)
+
+The monthly revenue generated shows that in Year 2023, February has the highest revenue and April has the lowest sales. This can also be traced to the 2024 with February also have the highest revenue.
 
 
 #### Quarterly Revenue
@@ -108,7 +114,7 @@ Total Sales = Quantity * Unit price
 
 ## SQL for Database Management and Quering
 ---
-### Query to retrieve the total sales for each product category----
+### Total sales per Product category
 
 ```SQL
 SELECT Product, SUM(Quantity * UnitPrice) AS TotalSales
@@ -116,14 +122,14 @@ FROM [dbo].[SalesData$]
 GROUP BY [Product]
 ```
 
-Query to find the number of sales transactions in each region------
+###  Sales transactions in each region------
 ```SQL
 SELECT Region, COUNT(OrderID) AS NumberOfTransactions
 FROM [dbo].[SalesData$]
 GROUP BY Region
 ```
 
---------query to find the highest-selling product by total sales value--------
+### Highest-selling product by total sales 
 ```SQL
 SELECT Top 1 Product, SUM(Quantity * UnitPrice) AS TotalSales
 FROM [dbo].[SalesData$]
@@ -133,7 +139,7 @@ ORDER BY TotalSales DESC
 ##### Expected Result
 ![top selling](https://github.com/user-attachments/assets/e35efcd9-9112-488c-91ac-1cf78fe953f1)
 
--------query to calculate total revenue per product------
+### Total revenue per product------
 ```SQL
 SELECT Product, SUM(Quantity * UnitPrice) AS TotalRevenue
 FROM [dbo].[SalesData$]
@@ -143,7 +149,7 @@ GROUP BY Product
 ![total revenue](https://github.com/user-attachments/assets/ea18acd6-7d9d-4f07-b666-ec4342497d04)
 
 
---------query to calculate monthly sales totals for the current year------
+### monthly sales totals for the current year------
 ``` SQL
 SELECT FORMAT(OrderDate, 'yyyy-MM') AS Month, SUM(Quantity * UnitPrice) AS TotalSales
 FROM [dbo].[SalesData$]
@@ -155,7 +161,7 @@ ORDER BY Month
 ##### Expected Result
 ![total sales monthly ](https://github.com/user-attachments/assets/0ddd14c7-ac21-4622-8148-a72d37d05e0c)
 
--------query to find the top 5 customers by total purchase amount-------
+### Top 5 Customers by Total purchase
 ```SQL
 SELECT TOP 5 [Customer Id], SUM(Quantity * UnitPrice) AS TotalPurchase
 FROM [dbo].[SalesData$]
@@ -165,7 +171,7 @@ ORDER BY TotalPurchase DESC
 ##### Expected Result
 ![top 5 customers](https://github.com/user-attachments/assets/f4e696a4-8d0b-4c64-a6af-d0b06d93ff8d)
 
-------query to calculate the percentage of total sales contributed by each region-----
+ ### percentage of total sales  by each region-----
 ```SQL
 select Region,
 SUM (sales_Revenue) as total_sales,
@@ -177,7 +183,7 @@ GROUP BY Region
 ORDER BY Region DESC
 ```
 
---------query to identify products with no sales in the last quarter------
+### products with no sales in the last quarter------
 ```SQL
 SELECT DISTINCT Product
 FROM [dbo].[SalesData$]
@@ -202,8 +208,7 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 
 ![image](https://github.com/user-attachments/assets/200fc8f6-82b3-47f5-97e2-07ba10848a05)
 
-
-Looking at this sales report, I can provide several key insights:
+### Key Insights
 
 1. Overall Performance:
 - Total revenue is 2.1M with an average revenue of 212 per unit
