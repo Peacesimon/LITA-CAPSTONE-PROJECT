@@ -65,7 +65,7 @@ EDA involves the exploring of the data to answer some questions about the Data s
 Total Sales = Quantity * Unit price
 ```
 
-### Data Visualization
+### Data Visualization Using Excel
 ---
 #### Revenue by Region	
 ![image](https://github.com/user-attachments/assets/0702097a-d0a8-48f7-bb1c-60fa06da7968)
@@ -139,7 +139,7 @@ ORDER BY TotalSales DESC
 ##### Expected Result
 ![top selling](https://github.com/user-attachments/assets/e35efcd9-9112-488c-91ac-1cf78fe953f1)
 
-### Total revenue per product------
+### Total revenue per product
 ```SQL
 SELECT Product, SUM(Quantity * UnitPrice) AS TotalRevenue
 FROM [dbo].[SalesData$]
@@ -149,7 +149,7 @@ GROUP BY Product
 ![total revenue](https://github.com/user-attachments/assets/ea18acd6-7d9d-4f07-b666-ec4342497d04)
 
 
-### monthly sales totals for the current year------
+### monthly sales totals for the current year
 ``` SQL
 SELECT FORMAT(OrderDate, 'yyyy-MM') AS Month, SUM(Quantity * UnitPrice) AS TotalSales
 FROM [dbo].[SalesData$]
@@ -171,7 +171,7 @@ ORDER BY TotalPurchase DESC
 ##### Expected Result
 ![top 5 customers](https://github.com/user-attachments/assets/f4e696a4-8d0b-4c64-a6af-d0b06d93ff8d)
 
- ### percentage of total sales  by each region-----
+ ### percentage of total sales  by each Region
 ```SQL
 select Region,
 SUM (sales_Revenue) as total_sales,
@@ -183,7 +183,7 @@ GROUP BY Region
 ORDER BY Region DESC
 ```
 
-### products with no sales in the last quarter------
+### products with no sales in the last quarter
 ```SQL
 SELECT DISTINCT Product
 FROM [dbo].[SalesData$]
@@ -244,8 +244,6 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 ![image](https://github.com/user-attachments/assets/0a28be46-c7d3-407a-8648-1fc95fefa3af)
 
 
-
-
 1. Overall Performance:
 - Total revenue for the East region is 485.9K
 - Average revenue per unit is 196
@@ -299,20 +297,15 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 
 ### Recommendations for the South Region:
 ---
-
 1. Product Diversification: Analyze market trends and customer needs to identify new product opportunities.
 
 2. Operational Scaling: Identify areas for process improvements and automation to drive further operational efficiencies.
-
 3. Pricing Optimization:
 - Analyze the price elasticity of demand for the current product mix.
 - Identify opportunities to optimize pricing while maintaining or even increasing sales volumes.
 
-
 ### Western Region
 ![image](https://github.com/user-attachments/assets/61d48fb8-126d-4d20-9059-c224e19f581a)
-
-
 ### Key Insights
 - The West region accounts for 100% of the total revenue, which stands at $300.3K.
 - The company sells 4 main products in the West region: Gloves, Hats, Shoes, and Socks.
@@ -320,13 +313,51 @@ WHERE OrderDate >= DATEADD(MONTH, -3, GETDATE())
 - Socks are the next highest seller at around 2K units.
 - Hats and Shoes have lower but still substantial sales volumes.
 
-
 ### Recommendations for the West Region:
-
 1. Product Portfolio Expansion:
 - Consider introducing new product categories beyond Gloves, Hats, Shoes, and Socks to further diversify the offering.
 - Analyze market trends and customer preferences to identify untapped opportunities.
 
 2. Pricing Optimization:
-- Evaluate the potential to increase prices on certain high-performing products without significantly impacting demand.
+- Evaluate the potential to increase prices on certain high-performing products without significantly impacting dema
 - This could help drive higher margins and profitability in the West region.
+
+
+![image](https://github.com/user-attachments/assets/2a06b736-1b0b-43bf-aa8d-1b6468bbd72b)
+
+1. Total Sales per Product:
+- Shoes have the highest total sales at 613k.
+- Shirts come in second at 316K 
+- Hats, Gloves, and Socks have lower but still substantial total sales.
+
+2. Average Sales per Product:
+- Shirts have the highest average revenue per unit at $327.
+- Shoes have the next highest average revenue at $309 per unit.
+- Gloves, Hats, and Socks have lower average revenues in the $122 to $200 range.
+
+3. Product Pricing:
+- The price points for the various products show a clear hierarchy, with Shirts and Shoes being the highest priced.
+- Hats, Jackets, and Gloves occupy the mid-range pricing.
+- Socks are the most affordable product.
+
+4. Product Quantity:
+- Hats have the highest total quantity sold at 16K units.
+- Shoes, Shirts, and Gloves follow closely with around 12-14K units sold.
+- Socks have the lowest total quantity at 8K units.
+
+ ### Recommendations:
+1. Pricing Optimization:
+- Analyze the price elasticity of demand for each product to identify opportunities for strategic pricing adjustments.
+- Consider premium pricing for high-performing products like Shirts and Shoes while monitoring impact on volume.
+
+2. Product Mix Refinement:
+- Evaluate the profitability and market fit of each product line.
+- Consider expanding or optimizing the product portfolio based on sales trends and customer preferences.
+
+3. Demand Forecasting:
+- Develop robust demand forecasting models to align production, inventory, and distribution with customer needs.
+- This can help optimize operational efficiency and reduce the risk of stockouts or oversupply.
+
+
+
+
